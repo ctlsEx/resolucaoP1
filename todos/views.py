@@ -7,5 +7,8 @@ class TodoListView(ListView):
     template_name = 'todo_list.html'
     context_object_name = 'todos'
 
-
-
+class TodoCreateView(CreateView):
+    model = Todo
+    fields = ['title', 'deadline']
+    template_name = 'todos/todo_form.html'
+    success_url = reverse_lazy('todo_list')
