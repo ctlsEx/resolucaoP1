@@ -5,7 +5,6 @@ from django.views.generic import ListView, CreateView
 class TodoListView(ListView):
     model = Todo
     template_name = 'todo_list.html'
-    context_object_name = 'todos'
 
 class TodoCreateView(CreateView):
     model = Todo
